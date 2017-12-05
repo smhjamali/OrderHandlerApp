@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pm="http://primefaces.org/mobile">
+    <h:head>
+        <title>#{msg.signup}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <div class="ui-fluid">
+            <h:form>
+                <p:panelGrid columns="2" columnClasses="ui-grid-col-2,ui-grid-col-10" layout="grid" styleClass="ui-panelgrid-blank">
+                    <p:outputLabel for="email" value="#{msg.email}"/>
+                    <p:inputText id="email" value="#{securityBean.email}" />                                
+
+                    <p:outputLabel for="username" value="#{msg.username}"/>
+                    <p:inputText id="username" value="#{securityBean.username}"/>
+
+                    <p:outputLabel for="password" value="#{msg.password}"/>
+                    <p:password id="password" value="#{securityBean.password}"/>
+                    <p:outputLabel for="passwordConfirm" value="#{msg.passwordConfirm}"/>
+                    <p:password id="passwordConfirm" value="#{securityBean.passwordConfirm}" />
+                </p:panelGrid>                
+                <div>
+                    <p:commandButton value="#{msg.submit}" action="#{securityBean.signup}" accesskey="alt+s" />
+                </div>
+            </h:form>
+        </div>
+    </h:body>
+</html>
