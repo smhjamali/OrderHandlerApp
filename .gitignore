@@ -1,5 +1,6 @@
 ./shiro-redis/target/*
 ./shiro-redis/*
+shiro-redis/*
 ./OrderHandlerApp/target/*
 ./orderhandler/target/*
 ./Entities/target/*
