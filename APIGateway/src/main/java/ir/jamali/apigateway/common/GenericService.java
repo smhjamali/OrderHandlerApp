@@ -1,8 +1,6 @@
 package ir.jamali.apigateway.common;
 
 import java.io.Serializable;
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 

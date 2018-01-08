@@ -8,10 +8,14 @@
         <resource-bundle>
               <base-name>ir.jamali.orderhandler.messages</base-name>
               <var>msg</var>
-         </resource-bundle>        
+         </resource-bundle>
+        <message-bundle>resources.application</message-bundle>        
          <locale-config>
              <default-locale>fa</default-locale>
              <supported-locale>en</supported-locale>
+         </locale-config>
+         <locale-config>
+         	<default-locale>en</default-locale>
          </locale-config>
     </application>
     
