@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>ir.jamali</groupId>
-    <artifactId>APIGatewayClient</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <parent>
+        <artifactId>OrderHandlerApp</artifactId>
+        <groupId>ir.jamali</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+        
+    <artifactId>APIGatewayClient</artifactId>    
     <packaging>ejb</packaging>
 
     <name>APIGatewayClient</name>
 
     <properties>
-        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-        <java.ee.api.version>8.0</java.ee.api.version>                
+        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>                       
     </properties>
 
     <dependencies>
@@ -25,7 +27,19 @@
             <groupId>ir.jamali</groupId>
             <artifactId>DataTransferObjects</artifactId>
             <version>1.0-SNAPSHOT</version>                    
-        </dependency>        
+        </dependency>
+        <dependency>
+            <groupId>ir.jamali</groupId>
+            <artifactId>ServerInterfaces</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>            
+	    <dependency>
+	        <groupId>ir.jamali</groupId>
+	        <artifactId>ClientInterfaces</artifactId>
+	        <version>1.0-SNAPSHOT</version>
+	        <type>jar</type>
+	    </dependency>            
     </dependencies>
 
     <build>

@@ -31,6 +31,8 @@
         <module>APIGateway</module>
         <module>APIGatewayClient</module>
         <module>orderhandler</module>
+        <module>ClientInterfaces</module>
+        <module>ServerInterfaces</module>
         <module>OrderHandlerApp</module>
     </modules>
 </project>

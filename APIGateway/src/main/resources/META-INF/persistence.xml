@@ -1,32 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="orderhandler_pu" transaction-type="JTA">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <jta-data-source>java:/jdbc/orderhandler</jta-data-source>
-        <properties>          
-            <property name="hibernate.connection.characterEncoding" value="utf8"/>
-            <property name="hibernate.connection.useUnicode" value="true"/>
-            <property name="hibernate.connection.charSet" value="UTF-8"/>            
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />          
-            <property name="hibernate.hbm2ddl.auto" value="update"/>        
-            <!--<property name="javax.persistence.schema-generation.database.action" value="create"/>-->
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>jdbc/orderhandler</jta-data-source>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>                       
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>            
             <!--<property name="javax.persistence.schema-generation.create-source" value="metadata"/>-->
             <!--<property name="javax.persistence.schema-generation.drop-source" value="metadata"/>-->
             <!--<property name="javax.persistence.schema-generation-action" value="create"/>-->
             <!--<property name="javax.persistence.schema-generation-target" value="database"/>-->
             <!--<property name="javax.persistence.sql-load-script-source" value="META-INF/load_script.sql"/>-->            
-            <property name="hibernate.show_sql" value="true"/>
         </properties>        
-    </persistence-unit>
-    <persistence-unit name="cassandra_pu" transaction-type="JTA">
-        <provider>com.impetus.kundera.KunderaPersistence</provider>     
-        <properties>            
-            <property name="kundera.nodes" value="localhost"/>
-            <property name="kundera.port" value="9160"/>
-            <property name="kundera.keyspace" value="KunderaExamples"/>
-            <property name="kundera.dialect" value="cassandra"/>
-            <property name="kundera.ddl.auto.prepare" value="create" />
-            <property name="kundera.client.lookup.class" value="com.impetus.client.cassandra.thrift.ThriftClientFactory" />         
-        </properties> 
     </persistence-unit>    
 </persistence>

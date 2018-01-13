@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <jdbc-resource jndi-name="jdbc/orderhandler" pool-name="orderhandlerPool" />
+    <jdbc-connection-pool name="orderhandlerPool" 
+    					res-type="javax.sql.ConnectionPoolDataSource"                          
+                        datasource-classname="org.postgresql.ds.PGPoolingDataSource" >
+        <property name="URL" value="jdbc:postgres://localhost:5432/orderhandler"/>
+        <property name="User" value="postgres"/>
+        <property name="Password" value="postgres"/>
+        <property name="ServerName" value="localhost"/>
+        <property name="PortNumber" value="5432"/>
+        <property name="DatabaseName" value="orderhandler"/>
+    </jdbc-connection-pool>
+</resources>

@@ -22,10 +22,10 @@
       
       <dependency>
           <groupId>ir.jamali</groupId>
-          <artifactId>APIGatewayClient</artifactId>
+          <artifactId>ClientInterfaces</artifactId>
           <version>1.0-SNAPSHOT</version>
-          <type>ejb</type>
-      </dependency>
+          <type>jar</type>
+      </dependency>                 
       <dependency>
           <groupId>ir.jamali</groupId>
           <artifactId>DataTransferObjects</artifactId>
